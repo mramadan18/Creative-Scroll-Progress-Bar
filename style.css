@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #000;
+  font-family: consolas;
+  cursor: context-menu;
+}
+
+.content-box {
+  color: #666;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.content-box h2 {
+  font-size: 3.5em;
+}
+
+.content-box p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+
+.progress-box {
+  position: fixed;
+  width: 220px;
+  z-index: 2;
+}
+
+.progress-box p {
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Tahoma;
+  letter-spacing: 2px;
+  background-color: #ddd;
+  color: #333;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.progress-box .trak {
+  position: relative;
+  width: 400px;
+  height: 10px;
+  background-color: #444;
+  border-radius: 5px;
+}
+
+.progress-box .trak .progress {
+  width: 0;
+  height: 100%;
+  background-image: linear-gradient(to left, #46d422, #4cb5e6);
+  box-shadow: 0 0 20px #4cb5e6, 0 0 40px #46d422;
+  animation: animate 5s linear infinite;
+  border-radius: 5px;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    filter: hue-rotate(0);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
